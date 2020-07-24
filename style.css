@@ -1,0 +1,74 @@
+main {
+  max-width: 1200px;
+  padding: 20px 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.topicpage-main .group-info-contain {
+  -webkit-box-shadow: 3px 3px 5px 6px #f7f7f7;
+          box-shadow: 3px 3px 5px 6px #f7f7f7;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  background: #fff;
+}
+
+.topicpage-main .group-info-contain figure {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 50px;
+}
+
+.topicpage-main .group-info-contain figure img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50vh;
+}
+
+.topicpage-main .group-info-contain > div {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+}
+
+.topicpage-main .group-info-contain .progress {
+  width: 100%;
+}
+
+.topicpage-main .btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 40px;
+}
+
+.topicpage-main .btn-wrap button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.topicpage-main .btn-wrap button:nth-child(1) {
+  border-radius: 6px 0 0 6px;
+}
+
+.topicpage-main .btn-wrap button:nth-child(2) {
+  border-radius: 0 6px 6px 0;
+}

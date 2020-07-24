@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>各隊遊玩介面</title>
+</head>
+
+<body>
+    <main class="topicpage-main">
+        <section class="group-info-contain">
+            <figure><img src="https://cdn.hk01.com/di/media/images/cis/5e4270c8a5e2c82bd6096139.jpg/KNyBGtInTJ6vNZG50MWr4YRe57jWFOUilG8xy5RvMcs?v=w1920" alt="組別頭像-teamA"></figure>
+            <div>
+                <h3>teamA</h3>
+                <p>總分 : 1024 分</p>
+                <div class="progress">
+                    <!-- 分數危險 progress-bar-danger -->
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                        style="width:70%">
+                        1024 分
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="topic-contain">
+            <div class="btn-wrap">
+                <!-- 選中 btn-primary toggle 沒選中 btn-secondary-->
+                <button type="button" class="btn btn-primary btn-lg">加分題</button>
+                <button type="button" class="btn btn-secondary btn-lg">減分題</button>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
