@@ -1,3 +1,11 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, Helvetica, Meiryo, PingFang TC, '蘋果儷中黑', Microsoft JhengHei, '微軟正黑體', sans-serif !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 0.4px;
+}
+
 main {
   max-width: 1200px;
   padding: 20px 30px;
@@ -23,9 +31,6 @@ main {
 }
 
 .topicpage-main .group-info-contain figure {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   margin-right: 50px;
 }
 
@@ -57,18 +62,57 @@ main {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 40px;
+  width: 60%;
 }
 
 .topicpage-main .btn-wrap button {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-right: 10px;
 }
 
-.topicpage-main .btn-wrap button:nth-child(1) {
-  border-radius: 6px 0 0 6px;
+.topicpage-main .topic-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 60px;
 }
 
-.topicpage-main .btn-wrap button:nth-child(2) {
-  border-radius: 0 6px 6px 0;
+.topicpage-main .topic-box {
+  -webkit-box-shadow: 3px 3px 5px 6px #f7f7f7;
+          box-shadow: 3px 3px 5px 6px #f7f7f7;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 10px;
+  min-width: 31%;
+  max-width: 31%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.topicpage-main .topic-box.red-box h6 {
+  background: #dc3545;
+}
+
+.topicpage-main .topic-box.blue-box h6 {
+  background: #337ab7;
+}
+
+.topicpage-main .topic-box h6 {
+  text-align: center;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 14px;
+  margin: 0;
+  opacity: .5;
 }

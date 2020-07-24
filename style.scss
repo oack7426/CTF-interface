@@ -1,3 +1,9 @@
+body {
+    font-family: Arial, Helvetica, Meiryo, PingFang TC, '蘋果儷中黑', Microsoft JhengHei, '微軟正黑體', sans-serif !important;
+    box-sizing: border-box;
+    letter-spacing: 0.4px;
+}
+
 main {
     max-width: 1200px;
     padding: 20px 30px;
@@ -16,7 +22,6 @@ main {
         padding:  20px;
         background: #fff;
         figure {
-            flex: 1;
             margin-right: 50px;
 
             img {
@@ -42,14 +47,44 @@ main {
         align-items: center;
         justify-content: space-around;
         margin-top: 40px;
+        width: 60%;
         button {
             flex: 1;
-            &:nth-child(1){
-                border-radius: 6px 0 0 6px;
+            margin-right: 10px;
+        }
+    }
+    .topic-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+    .topic-box{
+        box-shadow:3px 3px 5px 6px #f7f7f7;
+        flex: 1;
+        margin: 10px;
+        min-width: 31%;
+        max-width: 31%;
+        border-radius: 6px;
+        overflow: hidden;
+        &.red-box{
+            h6{
+                background: #dc3545;
             }
-            &:nth-child(2){
-                border-radius: 0 6px 6px 0;
+        }
+        &.blue-box{
+            h6{
+                background: #337ab7;
             }
+        }
+        h6{
+            text-align: center;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 14px;
+            margin: 0;
+            opacity: .5;
         }
     }
 }
