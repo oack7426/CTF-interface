@@ -13,21 +13,162 @@ main {
   margin: 0 auto;
 }
 
-a {
-  color: #333;
-  text-decoration: none;
+.progress-bar-info {
+  background: #337ab7;
 }
 
-a:hover {
-  text-decoration: none;
+.progress-bar-danger {
+  background: #dc3545;
+}
+
+.index-main {
+  background: url(../img/architecture-buildings-business-city-325185.jpg) no-repeat center;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 800px;
+}
+
+.index-main .btn-primary {
+  border: none;
+  background: #333;
+}
+
+.index-main h1 {
+  text-align: center;
+}
+
+.index-main .leaderboard-contain {
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.index-main .leaderboard-contain h3 {
+  background: #333;
+  color: #fff;
+  margin: 0;
+  padding: 15px 20px;
+}
+
+.index-main .leaderboard-contain .leaderboard-wrap {
+  padding: 0 20px;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.index-main .leaderboard-contain .leaderboard-wrap:last-child {
+  border: none;
+}
+
+.index-main .leaderboard-contain .leaderboard-wrap .leaderboard-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1;
+  padding: 10px 0;
+}
+
+.index-main .leaderboard-contain .leaderboard-wrap .leaderboard-box .leaderboard-inbox b {
+  margin-right: 20px;
+}
+
+.index-main .leaderboard-contain .leaderboard-wrap .leaderboard-box .circle {
+  display: inline-block;
+  padding: 5px 9px;
+  border: 3px solid #000;
+  border-radius: 50vh;
+}
+
+.index-main .topic-contain {
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.index-main .topic-contain h3 {
+  margin: 0;
+  padding: 15px 20px;
+}
+
+.index-main .topic-contain .leaderboard-wrap {
+  padding: 0 20px;
+}
+
+.index-main .topic-contain .leaderboard-wrap .leaderboard-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1;
+  padding: 10px 0;
+}
+
+.index-main .topic-contain .leaderboard-wrap .leaderboard-box .leaderboard-inbox b {
+  margin-right: 20px;
+}
+
+.index-main .topic-contain .leaderboard-wrap .leaderboard-box .circle {
+  display: inline-block;
+  padding: 5px 9px;
+  border: 3px solid #000;
+  border-radius: 50vh;
+}
+
+.index-main .btn-wrap {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.index-main .btn-wrap a {
+  display: inline-block;
+  border: none;
+}
+
+.index-main .btn-wrap a button {
+  border: none;
 }
 
 .topicpage-main {
   padding-top: 40px;
 }
 
+.topicpage-main .btn-primary {
+  border: none;
+  background: #333;
+}
+
+.topicpage-main a {
+  color: #333;
+  text-decoration: none;
+}
+
+.topicpage-main a:hover {
+  text-decoration: none;
+}
+
 .topicpage-main .fixed-top {
-  background: #337ab7;
+  background: #333;
   color: #fff;
   position: fixed;
   left: 0;
@@ -111,7 +252,7 @@ a:hover {
 }
 
 .topicpage-main .btn-wrap a {
-  color: #1481D8;
+  color: #337ab7;
   text-decoration: underline;
   padding-left: 20px;
 }
@@ -161,15 +302,7 @@ a:hover {
   background: #dc3545;
 }
 
-.topicpage-main .topic-box.red-box .num {
-  background: #dc3545;
-}
-
 .topicpage-main .topic-box.blue-box h6 {
-  background: #337ab7;
-}
-
-.topicpage-main .topic-box.blue-box .num {
   background: #337ab7;
 }
 
@@ -181,9 +314,8 @@ a:hover {
   padding: 10px 10px;
   -webkit-transform: translate(-50%, -50%) rotate(-20deg);
           transform: translate(-50%, -50%) rotate(-20deg);
-  color: #5bc0de;
-  background: #fff;
-  border: 3px solid #5bc0de;
+  color: #fff;
+  background: #333;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,16 +343,25 @@ a:hover {
   padding: 10px 0;
   font-size: 14px;
   margin: 0;
-  opacity: .5;
 }
 
 .topicpage-main .topic-box .num {
   color: #fff;
   text-align: center;
+  background: #333;
 }
 
 .topicpage-main .time {
   margin-top: 30px;
   text-align: right;
+}
+
+.topicpage-main .btn-bottom {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.topicpage-main .btn-bottom a {
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */

@@ -11,20 +11,162 @@ main {
     margin: 0 auto;
 }
 
-a {
-    color: #333;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
+.progress-bar-info {
+    background: #337ab7;
 }
 
+.progress-bar-danger {
+    background: #dc3545;
+}
+
+// 排行榜/ 題目總覽
+.index-main {
+    background: url(../img/architecture-buildings-business-city-325185.jpg) no-repeat center;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    max-width: 800px;
+
+    .btn-primary {
+        border: none;
+        background: #333;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .leaderboard-contain {
+        border-radius: 6px;
+        background: rgba($color: #fff, $alpha: .6);
+        overflow: hidden;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 50px;
+
+        h3 {
+            background: #333;
+            color: #fff;
+            margin: 0;
+            padding: 15px 20px;
+        }
+
+        .leaderboard-wrap {
+            padding: 0 20px;
+            border-bottom: 1px solid #b2b2b2;
+
+            &:last-child {
+                border: none;
+            }
+
+            .leaderboard-box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 16px;
+                margin: 0;
+                line-height: 1;
+                padding: 10px 0;
+
+
+                .leaderboard-inbox {
+                    b {
+                        margin-right: 20px;
+                    }
+                }
+
+                .circle {
+                    display: inline-block;
+                    padding: 5px 9px;
+                    border: 3px solid #000;
+                    border-radius: 50vh;
+                }
+
+
+            }
+        }
+    }
+
+    .topic-contain {
+        border-radius: 6px;
+        background: rgba($color: #fff, $alpha: .6);
+        overflow: hidden;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 50px;
+
+        h3 {
+            margin: 0;
+            padding: 15px 20px;
+        }
+
+        .leaderboard-wrap {
+            padding: 0 20px;
+
+            .leaderboard-box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 13px;
+                margin: 0;
+                line-height: 1;
+                padding: 10px 0;
+
+
+                .leaderboard-inbox {
+                    b {
+                        margin-right: 20px;
+                    }
+                }
+
+                .circle {
+                    display: inline-block;
+                    padding: 5px 9px;
+                    border: 3px solid #000;
+                    border-radius: 50vh;
+                }
+
+
+            }
+        }
+    }
+
+    .btn-wrap {
+        text-align: center;
+        margin-top: 30px;
+
+        a {
+            display: inline-block;
+            border: none;
+
+            button {
+                border: none;
+            }
+        }
+    }
+
+}
+
+// 遊玩介面
 .topicpage-main {
     padding-top: 40px;
 
+    .btn-primary {
+        border: none;
+        background: #333;
+    }
+
+    a {
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     .fixed-top {
-        background: #337ab7;
+        background: #333;
         color: #fff;
         position: fixed;
         left: 0;
@@ -86,7 +228,7 @@ a {
         }
 
         a {
-            color: #1481D8;
+            color: #337ab7;
             text-decoration: underline;
             padding-left: 20px;
         }
@@ -125,17 +267,10 @@ a {
                 background: #dc3545;
             }
 
-            .num {
-                background: #dc3545;
-            }
         }
 
         &.blue-box {
             h6 {
-                background: #337ab7;
-            }
-
-            .num {
                 background: #337ab7;
             }
         }
@@ -147,9 +282,9 @@ a {
             top: 50%;
             padding: 10px 10px;
             transform: translate(-50%, -50%) rotate(-20deg);
-            color: #5bc0de;
-            background: #fff;
-            border: 3px solid #5bc0de;
+            color: #fff;
+            background: #333;
+            // border: 3px solid #5bc0de;
             z-index: 10;
             display: flex;
             align-items: center;
@@ -172,7 +307,6 @@ a {
                 padding: 10px 0;
                 font-size: 14px;
                 margin: 0;
-                opacity: .5;
             }
         }
 
@@ -180,11 +314,21 @@ a {
         .num {
             color: #fff;
             text-align: center;
+            background: #333;
         }
     }
 
     .time {
         margin-top: 30px;
         text-align: right;
+    }
+
+    .btn-bottom {
+        text-align: center;
+        margin-top: 40px;
+
+        a {
+            display: inline-block;
+        }
     }
 }
