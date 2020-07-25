@@ -5,22 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>各隊遊玩介面</title>
 </head>
 
 <body>
+    <!-- 定案的遊戲規則：
+    tips: 先用簡單的1+1=2 的題目先demo介面
+
+    +- 分 題目每2分鐘 跳 +- 題目各一題
+    解完加分 + 只有自己加分
+    解完扣分 - 大家都扣（除了自己）
+    大家都解完同一題+-分 那題停止+-分 （0）
+
+    ———————————————————
+    遊戲介面：
+    介面 bootstrap 先刻介面系統就好
+    pag1 排行 ／ 所有題目分數總覽
+    page2 各別的解題介面
+
+    每組要有血條
+    加減分介面要一直狂跳，讓人有feel
+    要顯示 +- 是哪個題目+- 分
+    題目區塊 ＋－兩塊 -->
+
     <main class="topicpage-main">
+        <section class="fixed-top">
+            <p>目前總分 : 1024 分 </p>
+            <p>剩餘時間 : 20 分鐘 00 秒</p>
+            <p>距離新題目出現的時間：2 分 20 秒</p>
+            <!-- <svg onclick="$('.fixed-top').fadeOut();$('.topicpage-main').css('padding-top','20px')" width="1em"
+                height="1em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708L8 7.293 4.854 4.146a.5.5 0 1 0-.708.708L7.293 8l-3.147 3.146a.5.5 0 0 0 .708.708L8 8.707l3.146 3.147a.5.5 0 0 0 .708-.708L8.707 8l3.147-3.146z" />
+            </svg> -->
+        </section>
         <section class="group-info-contain">
-            <figure><img src="https://cdn.hk01.com/di/media/images/cis/5e4270c8a5e2c82bd6096139.jpg/KNyBGtInTJ6vNZG50MWr4YRe57jWFOUilG8xy5RvMcs?v=w1920" alt="組別頭像-teamA"></figure>
+            <figure><img
+                    src="https://cdn.hk01.com/di/media/images/cis/5e4270c8a5e2c82bd6096139.jpg/KNyBGtInTJ6vNZG50MWr4YRe57jWFOUilG8xy5RvMcs?v=w1920"
+                    alt="組別頭像-teamA"></figure>
             <div>
                 <h3>teamA</h3>
-                <h4>目前總分 : 1024 分 &nbsp;&nbsp;&nbsp;&nbsp; 剩餘時間 : 20 分鐘</h4>
-                <p>被攻擊 : -21分/秒&nbsp;&nbsp;&nbsp;&nbsp;回血 : +30分/秒</p>
+                <h4>目前總分 : 1024 分 &nbsp;&nbsp;&nbsp;&nbsp;剩餘時間 : 20 分鐘 00 秒</h4>
+                <p>被攻擊 : <b class='text-danger'> -21</b> 分/秒&nbsp;&nbsp;&nbsp;&nbsp;回血 : <b class='text-primary'>
+                        +30</b> 分/秒</p>
                 <div class="progress">
                     <!-- 分數危險 progress-bar-danger -->
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-                        style="width:70%">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                        aria-valuemax="100" style="width:70%">
                         1024 分
                     </div>
                 </div>
@@ -32,25 +65,72 @@
                 <button type="button" class="btn btn-primary btn-lg">所有題目</button>
                 <button type="button" class="btn btn-secondary btn-lg">攻擊題</button>
                 <button type="button" class="btn btn-secondary btn-lg">補血題</button>
+                <a href="./index.html">題目總覽／ 排行榜</a>
             </div>
+            <p class="topic-time-tips">距離新題目出現的時間：2 分 20 秒</p>
             <div class="topic-wrap">
-                <div class="topic-box red-box">
-                    <h6>扣分題</h6>
-                    123
-                </div>
-                <div class="topic-box blue-box">
-                    <h6>加分題</h6>
-                    456
-                </div>
-                <div class="topic-box blue-box">
-                    <h6>加分題</h6>
-                    456
-                </div>
-                
-                
+                <a class="topic-box red-box">
+                    <div class="over-box">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle-fill"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg><span>成功破解</span>
+                    </div>
+                    <div class="topic-head">
+                        <h6>攻擊題</h6>
+                        <p class="num">攻擊他隊 ： - 20 分 ／ 秒</p>
+                    </div>
+                    <div class="topic-inbox">
+                        <div class='topic-main'>
+                            <h4>算出總和</h4>
+                            <p>題目描述啦啦啦啦啦</p>
+                        </div>
+                        <p class='time'>花費時間 ： 10分5秒</p>
+                    </div>
+                </a>
+                <a class="topic-box blue-box">
+                    <div class="over-box" style="display: none;">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle-fill"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg><span>成功破解</span>
+                    </div>
+                    <div class="topic-head">
+                        <h6>補血題</h6>
+                        <p class="num">回血主隊 ： +20 分 ／ 秒</p>
+                    </div>
+                    <div class="topic-inbox">
+                        <div class='topic-main'>
+                            <h4>算出總和</h4>
+                            <p>題目描述啦啦啦啦啦</p>
+                        </div>
+                        <p class='time'>花費時間 ： 00分00秒</p>
+                    </div>
+                </a>
+                <a class="topic-box blue-box">
+                    <div class="over-box" style="display: none;">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle-fill"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg><span>成功破解</span>
+                    </div>
+                    <div class="topic-head">
+                        <h6>補血題</h6>
+                        <p class="num">回血主隊 ： +20 分 ／ 秒</p>
+                    </div>
+                    <div class="topic-inbox">
+                        <div class='topic-main'>
+                            <h4>算出總和</h4>
+                            <p>題目描述啦啦啦啦啦</p>
+                        </div>
+                        <p class='time'>花費時間 ： 10分5秒</p>
+                    </div>
+                </a>
             </div>
         </section>
-
     </main>
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

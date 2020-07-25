@@ -13,6 +13,44 @@ main {
   margin: 0 auto;
 }
 
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.topicpage-main {
+  padding-top: 40px;
+}
+
+.topicpage-main .fixed-top {
+  background: #337ab7;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 12px;
+  padding: 5px 10px;
+  z-index: 99;
+}
+
+.topicpage-main .fixed-top p {
+  margin: 0;
+  line-height: 1;
+}
+
 .topicpage-main .group-info-contain {
   -webkit-box-shadow: 3px 3px 5px 6px #f7f7f7;
           box-shadow: 3px 3px 5px 6px #f7f7f7;
@@ -72,6 +110,16 @@ main {
   margin-right: 10px;
 }
 
+.topicpage-main .btn-wrap a {
+  color: #1481D8;
+  text-decoration: underline;
+  padding-left: 20px;
+}
+
+.topicpage-main .topic-time-tips {
+  padding-top: 20px;
+}
+
 .topicpage-main .topic-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,9 +146,22 @@ main {
   max-width: 31%;
   border-radius: 6px;
   overflow: hidden;
+  display: block;
+  position: relative;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.topicpage-main .topic-box:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .topicpage-main .topic-box.red-box h6 {
+  background: #dc3545;
+}
+
+.topicpage-main .topic-box.red-box .num {
   background: #dc3545;
 }
 
@@ -108,7 +169,43 @@ main {
   background: #337ab7;
 }
 
-.topicpage-main .topic-box h6 {
+.topicpage-main .topic-box.blue-box .num {
+  background: #337ab7;
+}
+
+.topicpage-main .topic-box .over-box {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 10px 10px;
+  -webkit-transform: translate(-50%, -50%) rotate(-20deg);
+          transform: translate(-50%, -50%) rotate(-20deg);
+  color: #5bc0de;
+  background: #fff;
+  border: 3px solid #5bc0de;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topicpage-main .topic-box .over-box svg {
+  padding-right: 3px;
+}
+
+.topicpage-main .topic-box .topic-inbox {
+  padding: 15px;
+}
+
+.topicpage-main .topic-box .topic-head {
+  position: relative;
+}
+
+.topicpage-main .topic-box .topic-head h6 {
   text-align: center;
   color: #fff;
   padding: 10px 0;
@@ -116,3 +213,14 @@ main {
   margin: 0;
   opacity: .5;
 }
+
+.topicpage-main .topic-box .num {
+  color: #fff;
+  text-align: center;
+}
+
+.topicpage-main .time {
+  margin-top: 30px;
+  text-align: right;
+}
+/*# sourceMappingURL=style.css.map */
